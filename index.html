@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSVIDROS - Soluções em Vidraçaria</title>
+    <meta name="description" content="ABSVIDROS - Especializada em vidros temperados, espelhos, box para banheiro, fachadas e projetos especiais. Qualidade e elegância para seu projeto.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 10px;
+        }
+        
+        .slide {
+            min-width: 100%;
+            transition: all 0.5s ease;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-blue-900 mr-2">ABS</div>
+                <div class="text-2xl font-bold text-blue-600">VIDROS</div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a></li>
+                    <li><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition">Serviços</a></li>
+                    <li><a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition">Portfólio</a></li>
+                    <li><a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium transition">Sobre</a></li>
+                    <li><a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section id="home" class="relative pt-16">
+        <div class="slider-container relative h-[500px] md:h-[600px] overflow-hidden">
+            <div class="slider-wrapper flex h-full transition-transform duration-500">
+                <!-- Slide 1 -->
+                <div class="slide relative h-full w-full flex-shrink-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6dafeaf4-6bd7-479d-9476-86849e3e09d4.png" alt="Fachada de edifício moderno com grandes painéis de vidro refletindo o céu azul" class="w-full h-full object-cover">
+                    <div class="gradient-overlay absolute inset-0 flex items-center">
+                        <div class="container mx-auto px-4 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Soluções em Vidros para Arquitetura</h1>
+                            <p class="text-xl mb-8 max-w-2xl">Tecnologia e inovação em vidros temperados para projetos comerciais e residenciais</p>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide relative h-full w-full flex-shrink-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3d516067-5d9c-457a-ae8f-112bdef64e49.png" alt="Box de vidro moderno para banheiro com acabamento em alumínio e controle de privacidade" class="w-full h-full object-cover">
+                    <div class="gradient-overlay absolute inset-0 flex items-center">
+                        <div class="container mx-auto px-4 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Box para Banheiro Premium</h1>
+                            <p class="text-xl mb-8 max-w-2xl">Design sofisticado e durabilidade para seu banheiro</p>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Ver Modelos</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide relative h-full w-full flex-shrink-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cfc42f31-b6cc-4981-83a9-bffd20ea29c1.png" alt="Espelho decorativo grande em moldura fina de alumínio instalado em sala de estar moderna" class="w-full h-full object-cover">
+                    <div class="gradient-overlay absolute inset-0 flex items-center">
+                        <div class="container mx-auto px-4 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Espelhos Decorativos</h1>
+                            <p class="text-xl mb-8 max-w-2xl">Torne seu espaço mais amplo e elegante com nossos espelhos sob medida</p>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Conheça Mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition z-10">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition z-10">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+            
+            <!-- Slider Dots -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                <div class="w-3 h-3 rounded-full bg-white bg-opacity-70 cursor-pointer dot"></div>
+                <div class="w-3 h-3 rounded-full bg-white bg-opacity-70 cursor-pointer dot"></div>
+                <div class="w-3 h-3 rounded-full bg-white bg-opacity-70 cursor-pointer dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Oferecemos soluções completas em vidraçaria para atender às suas necessidades residenciais e comerciais</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Serviço 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Imagens/img_13.jpg" alt="Vidro temperado para fachada de prédio comercial com estrutura metálica moderna" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vidros Temperados</h3>
+                        <p class="text-gray-600 mb-4">Segurança e resistência para fachadas, sacadas e divisórias.</p>
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Imagens/img_4.jpg" alt="Box de vidro para banheiro com porta de correr e acabamento em alumínio escovado" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Box para Banheiro</h3>
+                        <p class="text-gray-600 mb-4">Design moderno e funcional para seu banheiro.</p>
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Imagens/img_3.jpg" alt="Espelho grande em moldura decorativa instalado em corredor com iluminação LED" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Espelhos Decorativos</h3>
+                        <p class="text-gray-600 mb-4">Amplie espaços e proporcione elegância ao ambiente.</p>
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Imagens/img_15.jpg" alt="Janelas panorâmicas de vidro em sala de estar com vista para jardim" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Janelas</h3>
+                        <p class="text-gray-600 mb-4">Soluções sob medida para iluminação e ventilação natural.</p>
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nosso Portfólio</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">Conheça alguns dos nossos últimos trabalhos realizados</p>
+            </div>
+            
+            <div class="custom-scrollbar overflow-x-auto pb-4">
+                <div class="flex space-x-6 w-max">
+                    <!-- Projeto 1 -->
+                   <!-- Galeria -->
+<div class="gallery-item relative group w-80 flex-shrink-0">
+    <img id="img1" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/41cb2f32-1c6e-49b2-8068-04f47513045e.png" 
+         alt="Fachada de edifício corporativo com cortinas de vidro e estrutura metálica" 
+         class="w-full h-64 object-cover rounded-lg">
+    <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300 rounded-lg group-hover:opacity-100">
+        <div class="text-white text-center px-4">
+            <h3 class="text-xl font-bold mb-2">Edifício Comercial</h3>
+            <p class="mb-4">Fachada em vidro temperado 10mm</p>
+            <button onclick="openModal('img1')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ampliar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <div class="relative">
+        <span onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl cursor-pointer z-50">&times;</span>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] rounded-lg shadow-lg transform scale-90 transition-transform duration-300">
+    </div>
+</div>
+                    
+                    <!-- Projeto 2 -->
+                    <div class="gallery-item relative group w-80 flex-shrink-0">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/da875478-e7c0-4c85-812b-df5b87f1765a.png" alt="Box de banheiro em vidro fumê com porta de abrir e puxador cromado" class="w-full h-64 object-cover rounded-lg">
+                        <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300 rounded-lg">
+                            <div class="text-white text-center px-4">
+                                <h3 class="text-xl font-bold mb-2">Box para Banheiro</h3>
+                                <p class="mb-4">Vidro fumê 8mm com porta pivotante</p>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ampliar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 3 -->
+                    <div class="gallery-item relative group w-80 flex-shrink-0">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fcfd4a13-c666-48c8-8fdd-55884412ffeb.png" alt="Escada com guarda-corpo em vidro e corrimão de aço inoxidável em ambiente moderno" class="w-full h-64 object-cover rounded-lg">
+                        <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300 rounded-lg">
+                            <div class="text-white text-center px-4">
+                                <h3 class="text-xl font-bold mb-2">Guarda-Corpo</h3>
+                                <p class="mb-4">Vidro laminado 10+10mm</p>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ampliar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 4 -->
+                    <div class="gallery-item relative group w-80 flex-shrink-0">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bdb95bf9-f7f9-491c-8843-4b86c438838b.png" alt="Janelas panorâmicas de vidro em sala de jantar com vista para o mar" class="w-full h-64 object-cover rounded-lg">
+                        <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300 rounded-lg">
+                            <div class="text-white text-center px-4">
+                                <h3 class="text-xl font-bold mb-2">Janelas Panorâmicas</h3>
+                                <p class="mb-4">Vidro duplo com proteção UV</p>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ampliar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 5 -->
+                    <div class="gallery-item relative group w-80 flex-shrink-0">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/97b4865e-60fd-41c2-b9d6-ccd5bf78c406.png" alt="Divisória de vidro jateado com desenho decorativo em ambiente corporativo" class="w-full h-64 object-cover rounded-lg">
+                        <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300 rounded-lg">
+                            <div class="text-white text-center px-4">
+                                <h3 class="text-xl font-bold mb-2">Divisórias Decorativas</h3>
+                                <p class="mb-4">Vidro jateado com design personalizado</p>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Ampliar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/06f05fae-1b5e-4aaf-ba23-4694f963041a.png" alt="Equipe de profissionais da ABSVIDROS trabalhando em instalação de fachada de vidro" class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre a ABSVIDROS</h2>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    
+                    <p class="text-gray-600 mb-6">Fundada em 2005, a ABSVIDROS se consolidou como referência em soluções em vidros temperados e arquitetura envidraçada, oferecendo produtos de alta qualidade aliados a um atendimento personalizado.</p>
+                    
+                    <p class="text-gray-600 mb-6">Nossa equipe é composta por profissionais experientes e qualificados, comprometidos em entregar excelência em cada projeto, desde as soluções mais simples até os desafios mais complexos.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-award text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Compromisso com a Qualidade</h3>
+                        </div>
+                        <p class="text-gray-600 ml-12">Utilizamos matérias-primas de primeira linha e processos rigorosos de controle de qualidade.</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Inovação e Tecnologia</h3>
+                        </div>
+                        <p class="text-gray-600 ml-12">Investimos constantemente em novas tecnologias para oferecer soluções diferenciadas.</p>
+                    </div>
+                    
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-handshake text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Atendimento Personalizado</h3>
+                        </div>
+                        <p class="text-gray-600 ml-12">Cada cliente recebe atenção individualizada para atender suas necessidades específicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O que dizem nossos clientes</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="text-gray-500 ml-2">Há 1 mês</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"A ABSVIDROS transformou nosso apartamento com os boxes de banheiro e espelhos decorativos. Profissionalismo e qualidade excepcionais!"</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2ec516a8-f405-471c-8391-0b11e5eaacaa.png" alt="Retrato de homem sorridente de meia idade com camisa social azul" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Mendes</h4>
+                            <p class="text-gray-500 text-sm">Residencial - São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="text-gray-500 ml-2">Há 3 meses</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Fachada executada com perfeição e dentro do prazo. A visibilidade e elegância trouxeram muitos elogios aos nossos clientes."</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/786c66df-e61c-47b3-a659-30bee8d5cc07.png" alt="Retrato de mulher profissional com blazer cinza e cabelo preso sorrindo" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Amanda Rios</h4>
+                            <p class="text-gray-500 text-sm">Comercial - Rio de Janeiro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="text-gray-500 ml-2">Há 2 semanas</div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Os vidros da ABSVIDROS trouxeram muito mais luz natural e sofisticação para nosso escritório. Recomendo!"</p>
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/511b0713-2e6b-4ed4-807b-627b79212299.png" alt="Retrato de homem jovem sorrindo com óculos e camisa casual" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rafael Tavares</h4>
+                            <p class="text-gray-500 text-sm">Empresarial - Belo Horizonte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Entre em contato</h2>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    
+                    <p class="text-gray-600 mb-8">Estamos prontos para transformar seu projeto em realidade. Solicite um orçamento ou venha nos visitar.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Informações de contato</h3>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-medium">Endereço:</p>
+                                <p class="text-gray-600">Av. das Indústrias, 1234<br>São Paulo - SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-medium">Telefone:</p>
+                                <p class="text-gray-600">(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-medium">Email:</p>
+                                <p class="text-gray-600">contato@absvidros.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Horário de atendimento</h3>
+                        <p class="text-gray-600 mb-2">Segunda a Sexta: 8h às 18h</p>
+                        <p class="text-gray-600">Sábado: 8h às 12h</p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Solicite um orçamento</h3>
+                        
+                        <div class="mb-4">
+                            <label for="nome" class="block text-gray-700 font-medium mb-2">Nome completo</label>
+                            <input type="text" id="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Seu nome">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="(00) 00000-0000">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="servico" class="block text-gray-700 font-medium mb-2">Serviço desejado</label>
+                            <select id="servico" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                                <option value="" disabled selected>Selecione um serviço</option>
+                                <option value="vidro-temperado">Vidro Temperado</option>
+                                <option value="box-banheiro">Box para Banheiro</option>
+                                <option value="espelhos">Espelhos</option>
+                                <option value="janelas-portas">Janelas e Portas</option>
+                                <option value="projeto-especial">Projeto Especial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="mensagem" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Descreva seu projeto..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition">Enviar solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.5444713877423!2d-40.21615422519805!3d-18.413571992884055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb59a1ab4de5665%3A0x73b12d41b954275e!2sABS%20VIDROS%20-%20VIDRA%C3%87ARIA!5e0!3m2!1spt-BR!2sbr!4v1757872499774!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="text-2xl font-bold text-blue-400 mr-2">ABS</div>
+                        <div class="text-2xl font-bold text-white">VIDROS</div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Soluções inovadoras em vidraçaria desde 2005.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/absvidros/" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Links Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfólio</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Serviços</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Vidros Temperados</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Box para Banheiro</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Espelhos Decorativos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Janelas e Portas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Projetos Especiais</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber novidades e promoções.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 ABSVIDROS - Todos os direitos reservados. Desenvolvido por <a href="#" class="text-blue-400 hover:text-blue-300">TechSolutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider-wrapper');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+            
+            // Initialize
+            slides[0].classList.add('active');
+            dots[0].classList.remove('bg-opacity-70');
+            dots[0].classList.add('bg-opacity-100');
+            
+            // Auto slide
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            function nextSlide() {
+                goToSlide((currentIndex + 1) % slides.length);
+            }
+            
+            function prevSlide() {
+                goToSlide((currentIndex - 1 + slides.length) % slides.length);
+            }
+            
+            function goToSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                dots[currentIndex].classList.remove('bg-opacity-100');
+                dots[currentIndex].classList.add('bg-opacity-70');
+                
+                currentIndex = index;
+                
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.remove('bg-opacity-70');
+                dots[currentIndex].classList.add('bg-opacity-100');
+                
+                // Reset auto slide timer
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            // Navigation controls
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            document.querySelector('.slider-container button:nth-of-type(1)').addEventListener('click', prevSlide);
+            document.querySelector('.slider-container button:nth-of-type(2)').addEventListener('click', nextSlide);
+            
+            // Mobile menu toggle
+            document.querySelector('header button').addEventListener('click', function() {
+                const nav = document.querySelector('nav');
+                nav.classList.toggle('hidden');
+                nav.classList.toggle('block');
+                
+                // Mobile menu items
+                if (nav.classList.contains('block')) {
+                    nav.innerHTML = `
+                        <ul class="flex flex-col space-y-4 p-4 bg-white shadow-lg rounded-lg">
+                            <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a></li>
+                            <li><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition">Serviços</a></li>
+                            <li><a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition">Portfólio</a></li>
+                            <li><a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium transition">Sobre</a></li>
+                            <li><a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition">Contato</a></li>
+                        </ul>
+                    `;
+                } else {
+                    nav.innerHTML = `
+                        <ul class="flex space-x-8">
+                            <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a></li>
+                            <li><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium transition">Serviços</a></li>
+                            <li><a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition">Portfólio</a></li>
+                            <li><a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium transition">Sobre</a></li>
+                            <li><a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium transition">Contato</a></li>
+                        </ul>
+                    `;
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const nav = document.querySelector('nav');
+                        if (nav && nav.classList.contains('block')) {
+                            nav.classList.remove('block');
+                            nav.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+
+        function openModal(imgId) {
+    const imgSrc = document.getElementById(imgId).src;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    lightboxImg.src = imgSrc;
+    lightbox.classList.remove('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+        lightboxImg.classList.add('scale-100');
+    }, 20);
+}
+
+// Fecha o modal
+function closeModal() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.classList.remove('scale-100');
+    setTimeout(() => {
+        lightbox.classList.add('opacity-0', 'pointer-events-none');
+    }, 200);
+}
+
+// Fecha clicando no fundo
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if(e.target === this) closeModal();
+});
+    </script>
+</body>
+</html>
+
